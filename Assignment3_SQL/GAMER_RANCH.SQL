@@ -1,3 +1,4 @@
+SET SQL_SAFE_UPDATES = 0;
 drop database if exists GAMER_RANCH;
 
 CREATE DATABASE GAMER_RANCH;
