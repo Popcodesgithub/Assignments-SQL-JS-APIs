@@ -28,9 +28,13 @@ app.get('/REVIEWS', async (req, res) => {
 app.post('/REVIEWS', async (req, res) => {
     const body = req.body;
     const {FullName, Game, Rating, Review } = body;
-    if (!FullName || !Game || !Rating || !Review) {
-    res.status(400).json({message: 'Bad request'})
-    return
+    if (
+        !FullName || typeof FullName !== 'string' || FullName.trim() === '' ||
+        !Game || typeof Game !== 'string' || Game.trim() === '' ||
+        typeof Rating !== 'number' || Rating < 0 || Rating > 10 ||
+        !Review || typeof Review !== 'string' || Review.trim() === ''
+    ) {
+        return res.status(400).json({ message: 'Bad request: Invalid data format' });
     }
     try {
     await pool.query(
@@ -48,7 +52,7 @@ app.delete('/REVIEWS', async (req, res) => {
     const { FullName } = req.body;
     console.log(req.body);
 
-    if (!FullName) {
+    if (!FullName || typeof FullName !== 'string' ) {
         res.status(400).json({ message: 'Bad request' });
         return;
     }
