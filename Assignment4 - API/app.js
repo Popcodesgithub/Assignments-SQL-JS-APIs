@@ -24,7 +24,7 @@ app.get('/REVIEWS', async (req, res) => {
     }
 });
 
-//insert a new review to the table 'reviews' in DB.
+//insert a new review to the table 'reviews' in DB, with validation of data types and error handling.
 app.post('/REVIEWS', async (req, res) => {
     const body = req.body;
     const {FullName, Game, Rating, Review } = body;
@@ -47,7 +47,7 @@ app.post('/REVIEWS', async (req, res) => {
     }
 });
 
-//Delete a review from the table 'reviews' in DB, when the user gives their full name.
+//Delete a review from the table 'reviews' in DB, when the user gives their full name, with validation of data types and error handling.
 app.delete('/REVIEWS', async (req, res) => {
     const { FullName } = req.body;
     console.log(req.body);
