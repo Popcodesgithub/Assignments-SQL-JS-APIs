@@ -2,7 +2,7 @@
 # <p align="center"> Assignment 4 </p>
 
 ## Before using this code
-Be sure you have npm installed the following dependencies in your JSON package: Node.js, Express.js, and mysql2 (I also installed nodemon for obvious reasons). Any questions regarding versions check the package.json file in this repo.
+Be sure you have npm installed the following dependencies in your JSON package: Node.js, Express.js, and mysql2 (I also installed nodemon which is a useful extension that monitors when you make changes, and restarts the server so you don't have to continually restart everytime you save). Any questions regarding versions check the package.json file in this repo.
 
 Before the successful use of this code please make sure you check the .env.EXAMPLE file
 . You must create your own version of this file on your computer, the .env.example file in this repo is just that...an example! :smirk:
@@ -14,7 +14,7 @@ Finally if you change the database name or the port you are using, this must all
 ### Below here is a quick guide on how to use this code successfully:
 ##
 ## Example of how to retrieve the table in postman 
-* Open postman and select new HTTP request, ensure the request type is 'GET'
+* Open postman and select new HTTP request, ensure the request type is 'GET', add your URL fot the local host e.g. "localhost:3000/REVIEWS".
 * The body can remain blank but be sure to select JSON for the package type.
 * Finally click send, and all the database rows will be generated in the body below.
 
@@ -24,8 +24,16 @@ Finally if you change the database name or the port you are using, this must all
          alt="Postman GET example">
 </figure>
 
+* If you receive an error message in the body please double check you have correctly enetered the data. In this instance below, there is a typo in the URL so it won't load the information from the database.
+
+<figure>
+   <figcaption>Postman GET failure</figcaption> 
+   <img src="img\Postman GET fail example.jpg"
+         alt="Postman GET filure">
+</figure>
+
 ## Example of how to insert a new review into the table using postman 
-* Open postman and select new HTTP request, ensure the request type is 'POST'
+* Open postman and select new HTTP request, ensure the request type is 'POST', add your URL fot the local host e.g. "localhost:3000/REVIEWS".
 * The body will need to contain the data you wish to insert in the database. See the example below for clarificaiton.
 * Select JSON for the package type.
 * Finally click send, and if the new row has bee successfully created you will see a confirmaiton message as in the figure.
@@ -52,7 +60,7 @@ Finally if you change the database name or the port you are using, this must all
 </figure>
 
 ## Example of how to delete an exsiting review from the table using postman 
-* Open postman and select new HTTP request, ensure the request type is 'DELETE'
+* Open postman and select new HTTP request, ensure the request type is 'DELETE', add your URL fot the local host e.g. "localhost:3000/REVIEWS".
 * This query allows you to delete all posts made by one person, by selecting a persons full name.
     * Be aware, ALL reviews related to that person will be deleted.
       See the example in the figure below for clarificaiton on how to enter the full name correctly.
@@ -73,7 +81,13 @@ Finally if you change the database name or the port you are using, this must all
 </figure>
 
 
-* As above if you recieve an error message double check the data has been entered correctly!
+* As above if you recieve an error message double check the data has been entered correctly! In the error below there was no review with this name found, the delete will fail. 
+
+<figure>
+   <figcaption>Postman DELETE failure</figcaption> 
+   <img src="img\Postman DELETE fail example.jpg"
+         alt="Postman DELETE failure">
+</figure>
 
 ##
 # <p align="center"> Thank you!</p>
