@@ -2,14 +2,14 @@
 # <p align="center"> Assignment 4 </p>
 
 ## Before using this code
-Be sure you have installed Node.js, Express.js, and mysql2 (I also installed nodemon for obvious reasons). Any questions regarding versions check the package.json file in this repo.
+Be sure you have npm installed the following dependencies in your JSON package: Node.js, Express.js, and mysql2 (I also installed nodemon for obvious reasons). Any questions regarding versions check the package.json file in this repo.
 
 Before the successful use of this code please make sure you check the .env.EXAMPLE file
-. You must create this file on your computer, the .env.example file in this repo is just that...an example! :smirk:
+. You must create your own version of this file on your computer, the .env.example file in this repo is just that...an example! :smirk:
 
-Once you have created a new .env file, you will need to complete the file with your own information e.g. your workbench password, the database name, your chosen port (Host and user can remain the same if you're working on your local computer). 
+Once you have created a new .env file, you will need to complete the file with your ospecific information e.g. your workbench password, the database name, your chosen port (Host and user can remain the same if you're working on your local computer). 
 
-Finally if you change the database name or the port you are using, this must all be updated in the app.js file in order to connect everything.
+Finally if you change the database name or the port you are using, this must all then be updated in the app.js file in order to connect everything.
 
 ### Below here is a quick guide on how to use this code successfully:
 ##
