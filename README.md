@@ -1,6 +1,6 @@
 # Helen-Allen-Full-Stack
 
-## A private repository for assignments and projects related to the CFG Full stack stream - Helen Allen 
+## A private repository for assignments and projects related to the Full stack stream - Helen Allen 
 
 **I'm a scouser (originally from Liverpool), and I speak English and Italian!** :speech_balloon:
 
